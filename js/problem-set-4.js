@@ -5,6 +5,7 @@
 function hello() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
+  document.getElementById("output1").innerHTML="Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -22,6 +23,8 @@ function helloAgain() {
   //////////// DO NOT MODIFY      in response to your prompt.
 
   // WRITE YOUR EXERCISE 2 CODE HERE
+  name = prompt("What is your name?");
+  document.getElementById("output2").innerHTML="Hello, " + name + "!";
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -42,6 +45,10 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
+  var fahrenheit = ((cels*9)/5 + 32).toFixed(2);
+
+  document.getElementById("output3").innerHTML=cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.";
+
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -62,6 +69,9 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
+  var celsius = ((fahr - 32)*5/9).toFixed(2);
+
+  document.getElementById("output4").innerHTML=fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -86,6 +96,12 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
+  var miles=Math.floor(inches/63360);
+  var yards=Math.floor((inches - (miles*63360))/36);
+  var feet=Math.floor((inches - (miles*63360) - (yards*36))/12);
+  inches=Math.floor((inches - (miles*63360) - (yards*36) - (feet*12))/1);
+  document.getElementById("output5").innerHTML="Miles: " + miles + "<br/>Yards: " + yards + "<br/>Feet: " + feet + "<br/>Inches: " + inches;
+
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
