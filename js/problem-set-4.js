@@ -126,6 +126,10 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
+  var kmeters=Math.floor(centimeters/100000);
+  var meters=Math.floor((centimeters - (kmeters*100000))/100);
+  centimeters=Math.floor((centimeters - (kmeters*100000) - (meters*100))/1);
+  document.getElementById("output6").innerHTML="Kilometers: " + kmeters + "<br/>Meters: " + meters + "<br/>Centimeters: " + centimeters;
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -150,6 +154,12 @@ function fluidOunces() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
+  var gallon=Math.floor(fluidOunces/128);
+  var quart=Math.floor((fluidOunces - (gallon*128))/32);
+  var pint=Math.floor((fluidOunces - (gallon*128) - (quart*32))/16);
+  var cup=Math.floor((fluidOunces - (gallon*128) - (quart*32) - (pint*16))/8);
+  fluidOunces=Math.floor((fluidOunces - (gallon*128) - (quart*32) - (pint*16) - (cup*8))/1);
+  document.getElementById("output7").innerHTML="Gallons: " + gallon + "<br/>Quarts: " + quart + "<br/>Pints: " + pint + "<br/>Cups: " + cup + "<br/>Fluid Ounces: " + fluidOunces;
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -174,6 +184,10 @@ function ounces() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 8 CODE HERE
+  var tons=Math.floor(ounces/32000);
+  var pounds=Math.floor((ounces - (tons*32000))/16);
+  ounces=Math.floor((ounces - (tons*32000) - (pounds*16))/1);
+  document.getElementById("output8").innerHTML="Tons: " + tons + "<br/>Pounds: " + pounds + "<br/>Ounces: " + ounces;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -198,6 +212,13 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
+  var dollar=Math.floor((pennies)/100);
+  var quarter=Math.floor((pennies - (dollar*100))/25);
+  var dime=Math.floor((pennies - (dollar*100) - (quarter*25))/10);
+  var nickel=Math.floor((pennies - (dollar*100) - (quarter*25) - (dime*10))/5);
+  pennies=Math.floor((pennies - (dollar*100) - (quarter*25) - (dime*10) - (nickel*5))/1);
+
+  document.getElementById("output9").innerHTML="Dollars: " + dollar + "<br/>Quarters: " + quarter + "<br/>Dimes: " + dime + "<br/>Nickels: " + nickel + "<br/>Pennies: " + pennies; 
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -222,6 +243,13 @@ function change() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 10 CODE HERE
+  amount*=100
+  var quarter=Math.floor((amount)/25);
+  var dime=Math.floor((amount - (quarter*25))/10);
+  var nickel=Math.floor((amount - (quarter*25) - (dime*10))/5);
+  var pennies=Math.floor((amount - (quarter*25) - (dime*10) - (nickel*5))/1);
+
+  document.getElementById("output10").innerHTML=quarter+dime+nickel+pennies+" coins."; 
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
