@@ -248,8 +248,14 @@ function change() {
   let dime=Math.floor((amount - (quarter*25))/10);
   let nickel=Math.floor((amount - (quarter*25) - (dime*10))/5);
   let pennies=Math.floor((amount - (quarter*25) - (dime*10) - (nickel*5))/1);
+  let coins=quarter+dime+nickel+pennies
 
-  document.getElementById("output10").innerHTML=quarter+dime+nickel+pennies+" coins."; 
+  if(coins==1) {
+    document.getElementById("output10").innerHTML=coins+" coin."; 
+  }
+  if(coins!=1) {
+    document.getElementById("output10").innerHTML=coins+" coins."; 
+  }
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
